@@ -1,0 +1,21 @@
+{
+  "topics": [
+    "spatial transcriptomics analysis",
+    "multi-omics sequencing pipeline",
+    "deep learning sequencing data"
+  ],
+  "search_window_days": 30,
+  "focus_areas": [
+    "spatial transcriptomics / multi-omics",
+    "pipeline development",
+    "DL / innovative algorithms in sequencing"
+  ],
+  "schedule": {
+    "interval": "weekly",
+    "day": "Monday"
+  },
+  "arxiv_categories": ["q-bio", "cs.LG", "stat.ML"],
+  "biorxiv_categories": ["bioinformatics", "genomics", "systems biology"],
+  "max_results_per_source": 50,
+  "detailed_summary_limit": 20
+}
