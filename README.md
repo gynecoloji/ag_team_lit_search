@@ -2,6 +2,8 @@
 
 A multi-agent system for biomedical literature search, analysis, and synthesis — built on Claude Code skills and designed for biomedical research in disease mechanisms, therapeutic targets, drug discovery, and translational research.
 
+![Literature Search Agent Team Infographic](infographic.svg)
+
 ---
 
 ## How It Works

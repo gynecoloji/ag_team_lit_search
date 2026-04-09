@@ -1,1 +1,26 @@
 /docs
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated reports (uncomment to exclude from git)
+# reports/
+
+# Generated plots
+reports/trends/plots/
+
+# Presentations (binary)
+reports/presentations/*.pptx
+
+# Editor
+.vscode/
+.idea/
