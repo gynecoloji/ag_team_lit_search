@@ -2,7 +2,7 @@
 name: lit-search
 description: Search recent publications across PubMed, bioRxiv, medRxiv, and arXiv on a given topic and produce a structured summary report.
 user_invocable: true
-argument: topic - the research topic to search for (e.g., "spatial transcriptomics deep learning")
+argument: topic - the research topic to search for (e.g., "KRAS inhibitors pancreatic cancer")
 ---
 
 # Literature Search
@@ -59,7 +59,7 @@ Search publications across PubMed, bioRxiv, medRxiv, and arXiv for a given topic
    - category: "systems biology", server: "biorxiv", recent_days: {search_days}, limit: 100
 
    For each result, check if the title and abstract are relevant to: "{topic}"
-   and the focus areas: spatial transcriptomics/multi-omics, pipeline development, DL/algorithms in sequencing.
+   and the focus areas: disease mechanisms, therapeutic targets, drug discovery, and translational/clinical research.
 
    For relevant results, use mcp__claude_ai_bioRxiv__get_preprint to get full details.
 
@@ -84,7 +84,7 @@ Search publications across PubMed, bioRxiv, medRxiv, and arXiv for a given topic
    Search without category filter to get all recent medRxiv preprints, then filter by relevance.
 
    For each result, check if the title and abstract are relevant to: "{topic}"
-   and the focus areas: spatial transcriptomics/multi-omics, pipeline development, DL/algorithms in sequencing.
+   and the focus areas: disease mechanisms, therapeutic targets, drug discovery, and translational/clinical research.
 
    For relevant results, use mcp__claude_ai_bioRxiv__get_preprint with server="medrxiv" to get full details.
 
@@ -103,7 +103,7 @@ Search publications across PubMed, bioRxiv, medRxiv, and arXiv for a given topic
      Prompt: "Extract all papers from this Atom XML feed. For each paper return: title, authors, date (published), arxiv_id, abstract, categories. Only include papers from the last {search_days} days (after {date_from})."
 
    Filter results for relevance to: "{topic}"
-   and focus areas: spatial transcriptomics/multi-omics, pipeline development, DL/algorithms in sequencing.
+   and focus areas: disease mechanisms, therapeutic targets, drug discovery, and translational/clinical research.
 
    Return only RELEVANT results as a structured list. For each paper include:
    - title, authors (list), date (YYYY-MM-DD), source ("arXiv"), arxiv_id, url (https://arxiv.org/abs/{id}), abstract

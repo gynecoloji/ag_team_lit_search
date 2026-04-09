@@ -72,7 +72,7 @@ Analyze the most recent search report and generate a comprehensive trend debrief
    **Report analyzed:** search report filename
    **Papers covered:** M papers
    **Date range:** earliest paper date — latest paper date
-   **Focus areas:** spatial transcriptomics / multi-omics, pipeline development, DL / innovative algorithms in sequencing
+   **Focus areas:** disease mechanisms, therapeutic targets, drug discovery, translational and clinical research
 
    ---
 
@@ -142,7 +142,7 @@ Analyze the most recent search report and generate a comprehensive trend debrief
 
    ## Priority Reading List
 
-   Rank the top 5 papers from the current report by actionability to the user's work (spatial transcriptomics, multi-omics, deep learning in sequencing). For each, give a concrete reason — not just the topic, but *why it matters now*.
+   Rank the top 5 papers from the current report by actionability to the user's work (disease mechanisms, therapeutic targets, drug discovery, translational research). For each, give a concrete reason — not just the topic, but *why it matters now*.
 
    | Rank | Paper (Authors, Year) | DOI/URL | Why Read It |
    |------|-----------------------|---------|-------------|

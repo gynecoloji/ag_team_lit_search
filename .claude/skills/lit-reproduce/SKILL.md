@@ -179,7 +179,7 @@ Given a paper identifier and a specific figure, table, or result, produce a conc
    - **Connection:** How this relates to techniques the user already knows (leverage their computational biology background)
    - **Go deeper:** The single best resource from the Resource Discovery Agent
 
-   Use the appropriate explanation level based on what the user said they know. Default to intermediate for a computational biologist.
+   Use the appropriate explanation level based on what the user said they know. Default to intermediate for a biomedical researcher.
 
    After each explanation, ask:
    > "Does that make sense? Want me to go deeper on this, or shall we move on?"

@@ -135,7 +135,7 @@ Compare two or more competing methods/tools head-to-head. Pull paper details for
    - Specific scenarios, data types, or requirements where this method is preferred
 
    ### For your work specifically
-   - Given your focus on spatial transcriptomics, multi-omics, and pipeline development, which method fits better and why
+   - Given your focus on disease mechanisms, therapeutic targets, and translational research, which method fits better and why
    ```
 
 4. **Save the report** to `reports/comparisons/YYYY-MM-DD-<method1>-vs-<method2>.md`.

@@ -2,7 +2,7 @@
 name: lit-review
 description: Generate a mini-review/perspective from accumulated search reports — a narrative synthesis suitable for lab meetings, grant intros, or review paper sections.
 user_invocable: true
-argument: topic - the topic to synthesize a review for (e.g., "spatial transcriptomics deconvolution methods")
+argument: topic - the topic to synthesize a review for (e.g., "CAR-T cell therapy in solid tumors")
 ---
 
 # Literature Mini-Review
@@ -39,7 +39,7 @@ Synthesize all available search reports into a narrative mini-review on a given 
    3. Current state: What are the dominant approaches as of the most recent papers?
    4. Why a review is needed: What has changed recently that makes synthesis valuable?
 
-   Use in-text citations as (Author et al., YYYY). Write for an audience of computational biologists familiar with genomics but not necessarily experts in {topic}.
+   Use in-text citations as (Author et al., YYYY). Write for an audience of biomedical researchers familiar with molecular biology and disease biology but not necessarily experts in {topic}.
    ````
 
    **Methods Landscape Agent prompt:**
@@ -70,7 +70,7 @@ Synthesize all available search reports into a narrative mini-review on a given 
    2. **Missing benchmarks/datasets:** What evaluation infrastructure does the field need?
    3. **Underexplored connections:** Are there adjacent fields or methods that could be applied but haven't been?
    4. **Predicted directions:** Based on current trends, where is the field heading in the next 1-2 years?
-   5. **Opportunities for your lab:** Given focus areas in spatial transcriptomics, multi-omics, and DL/algorithms in sequencing, where are the highest-impact opportunities?
+   5. **Opportunities for your lab:** Given focus areas in disease mechanisms, therapeutic targets, drug discovery, and translational research, where are the highest-impact opportunities?
 
    Be specific and actionable. Use (Author et al., YYYY) citations.
    ````

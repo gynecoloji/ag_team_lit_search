@@ -65,4 +65,4 @@ literature_search/
 
 ## User Context
 
-The primary user is a computational biologist focused on spatial transcriptomics, multi-omics integration, and deep learning applied to sequencing data. Reports should be tailored to this expertise level.
+The primary user is a biomedical researcher focused on disease mechanisms, therapeutic targets, drug discovery, and translational research. Reports should be tailored to this expertise level.
