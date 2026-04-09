@@ -7,22 +7,32 @@ argument: topic - the research topic to search for (e.g., "spatial transcriptomi
 
 # Literature Search
 
-Search recent publications (last 30 days) across PubMed, bioRxiv, medRxiv, and arXiv for the given topic. Produce a structured summary report with detailed analysis cards.
+Search publications across PubMed, bioRxiv, medRxiv, and arXiv for a given topic within a user-specified time span. Produce a structured summary report with detailed analysis cards.
 
 ## Instructions
 
-1. **Read configuration.** Read `config.json` from the project root (`literature_search/config.json`) to get focus areas, search window, categories, and limits.
+1. **Read configuration.** Read `config.json` from the project root (`literature_search/config.json`) to get focus areas, categories, and limits.
 
-2. **Dispatch 4 parallel search agents.** Use the Agent tool to launch all 4 in parallel in a single message. Each agent must return results as a structured list with fields: title, authors, date, source, doi_or_url, abstract.
+2. **Ask the user for the search time span.** Use AskUserQuestion to prompt:
+   > "What time span should this search cover?"
+   Options:
+   - "Last 1 month" (default / recommended)
+   - "Last 3 months"
+   - "Last 6 months"
+   - "Last 1 year"
+
+   Compute `{search_days}` from the selected option (30, 90, 180, or 365 days). Compute `{date_from}` as today minus `{search_days}` in YYYY-MM-DD and YYYY/MM/DD formats, and `{date_to}` as today.
+
+3. **Dispatch 4 parallel search agents.** Use the Agent tool to launch all 4 in parallel in a single message. Each agent must return results as a structured list with fields: title, authors, date, source, doi_or_url, abstract. **All agents must use the user-selected time span** (`{search_days}` / `{date_from}` / `{date_to}`) instead of a hardcoded 30 days.
 
    **PubMed Agent prompt:**
    ````
-   You are a PubMed search agent. Search for recent publications related to: "{topic}"
+   You are a PubMed search agent. Search for publications related to: "{topic}"
 
    Use the mcp__claude_ai_PubMed__search_articles tool with:
    - query: "{topic}" combined with relevant terms from the focus areas
-   - date_from: (30 days ago in YYYY/MM/DD format)
-   - date_to: (today in YYYY/MM/DD format)
+   - date_from: "{date_from_slash}" (YYYY/MM/DD format)
+   - date_to: "{date_to_slash}" (YYYY/MM/DD format)
    - max_results: 50
    - sort: "pub_date"
 
@@ -39,21 +49,21 @@ Search recent publications (last 30 days) across PubMed, bioRxiv, medRxiv, and a
 
    **bioRxiv Agent prompt:**
    ````
-   You are a bioRxiv search agent. Search for recent preprints related to: "{topic}"
+   You are a bioRxiv search agent. Search for preprints related to: "{topic}"
 
    IMPORTANT: The bioRxiv search tool does NOT support keyword search. You must search by category and date, then filter results by relevance.
 
    Search these categories one at a time using mcp__claude_ai_bioRxiv__search_preprints:
-   - category: "bioinformatics", server: "biorxiv", recent_days: 30, limit: 100
-   - category: "genomics", server: "biorxiv", recent_days: 30, limit: 100
-   - category: "systems biology", server: "biorxiv", recent_days: 30, limit: 100
+   - category: "bioinformatics", server: "biorxiv", recent_days: {search_days}, limit: 100
+   - category: "genomics", server: "biorxiv", recent_days: {search_days}, limit: 100
+   - category: "systems biology", server: "biorxiv", recent_days: {search_days}, limit: 100
 
    For each result, check if the title and abstract are relevant to: "{topic}"
    and the focus areas: spatial transcriptomics/multi-omics, pipeline development, DL/algorithms in sequencing.
 
    For relevant results, use mcp__claude_ai_bioRxiv__get_preprint to get full details.
 
-   Also check mcp__claude_ai_bioRxiv__search_published_preprints with recent_days: 30
+   Also check mcp__claude_ai_bioRxiv__search_published_preprints with recent_days: {search_days}
    to note which preprints have been published in journals.
 
    Return only RELEVANT results as a structured list. For each paper include:
@@ -63,12 +73,12 @@ Search recent publications (last 30 days) across PubMed, bioRxiv, medRxiv, and a
 
    **medRxiv Agent prompt:**
    ````
-   You are a medRxiv search agent. Search for recent preprints related to: "{topic}"
+   You are a medRxiv search agent. Search for preprints related to: "{topic}"
 
    IMPORTANT: The medRxiv search tool does NOT support keyword search. You must search by category and date, then filter results by relevance.
 
    Search using mcp__claude_ai_bioRxiv__search_preprints with:
-   - server: "medrxiv", recent_days: 30, limit: 100
+   - server: "medrxiv", recent_days: {search_days}, limit: 100
 
    Note: medRxiv has fewer category options relevant to computational biology.
    Search without category filter to get all recent medRxiv preprints, then filter by relevance.
@@ -84,13 +94,13 @@ Search recent publications (last 30 days) across PubMed, bioRxiv, medRxiv, and a
 
    **arXiv Agent prompt:**
    ````
-   You are an arXiv search agent. Search for recent preprints related to: "{topic}"
+   You are an arXiv search agent. Search for preprints related to: "{topic}"
 
    Use the WebFetch tool to query the arXiv API. Make separate requests for each category:
 
    For each category in [q-bio, cs.LG, stat.ML]:
      URL: https://export.arxiv.org/api/query?search_query=cat:{category}+AND+all:{url_encoded_topic}&start=0&max_results=50&sortBy=submittedDate&sortOrder=descending
-     Prompt: "Extract all papers from this Atom XML feed. For each paper return: title, authors, date (published), arxiv_id, abstract, categories. Only include papers from the last 30 days."
+     Prompt: "Extract all papers from this Atom XML feed. For each paper return: title, authors, date (published), arxiv_id, abstract, categories. Only include papers from the last {search_days} days (after {date_from})."
 
    Filter results for relevance to: "{topic}"
    and focus areas: spatial transcriptomics/multi-omics, pipeline development, DL/algorithms in sequencing.
@@ -149,7 +159,7 @@ Search recent publications (last 30 days) across PubMed, bioRxiv, medRxiv, and a
    | ...   | ...    | ...  | ...        |
    ```
 
-7. **Save the report** to `reports/searches/YYYY-MM-DD-<sanitized-topic>.md` where the topic is lowercased, spaces replaced with hyphens, special characters removed.
+7. **Save the report** to `reports/searches/YYYY-MM-DD-<sanitized-topic>.md` where the topic is lowercased, spaces replaced with hyphens, special characters removed. Include the search time span in the report header (e.g., "Search Window: {date_from} to {date_to} ({search_days} days)").
 
 8. **Offer to add topic to tracked list.** If the searched topic is not already in `config.json` topics, ask:
    > "Would you like to add '{topic}' to your tracked topics for periodic searches?"
