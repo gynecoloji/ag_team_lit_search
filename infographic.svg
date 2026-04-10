@@ -40,6 +40,10 @@
       <stop offset="0%" style="stop-color:#3a3a1e"/>
       <stop offset="100%" style="stop-color:#21210d"/>
     </linearGradient>
+    <linearGradient id="skill8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d2e3a"/>
+      <stop offset="100%" style="stop-color:#051820"/>
+    </linearGradient>
     <!-- Arrow marker -->
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L8,3 z" fill="#4a9eff" opacity="0.7"/>
@@ -82,7 +86,7 @@
   <!-- Title text -->
   <text x="600" y="57" text-anchor="middle" fill="#e8f4ff" font-size="26" font-weight="700" letter-spacing="2" filter="url(#glow)">LITERATURE SEARCH AGENT TEAM</text>
   <text x="600" y="83" text-anchor="middle" fill="#7ab8ff" font-size="13" letter-spacing="3">MULTI-AGENT · BIOMEDICAL RESEARCH · AUTOMATED SYNTHESIS</text>
-  <text x="600" y="101" text-anchor="middle" fill="#4a7a9b" font-size="10" letter-spacing="1">7 SKILLS · 4 DATA SOURCES · PARALLEL SUB-AGENTS</text>
+  <text x="600" y="101" text-anchor="middle" fill="#4a7a9b" font-size="10" letter-spacing="1">8 SKILLS · 4 DATA SOURCES · PARALLEL SUB-AGENTS</text>
 
   <!-- ============ DATA SOURCES ROW ============ -->
   <text x="600" y="140" text-anchor="middle" fill="#4a9eff" font-size="11" letter-spacing="4" font-weight="600">DATA SOURCES</text>
@@ -121,62 +125,66 @@
   <!-- ============ WORKFLOW PIPELINE ============ -->
   <text x="600" y="232" text-anchor="middle" fill="#4a9eff" font-size="11" letter-spacing="4" font-weight="600">WORKFLOW PIPELINE</text>
 
-  <!-- Workflow step boxes -->
-  <!-- Step arrows between boxes -->
-  <line x1="197" y1="274" x2="227" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
-  <line x1="354" y1="274" x2="384" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
-  <line x1="511" y1="274" x2="541" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
-  <line x1="668" y1="274" x2="698" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
-  <line x1="825" y1="274" x2="855" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
-  <line x1="982" y1="274" x2="1012" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
+  <!-- 8 step arrows -->
+  <line x1="156" y1="274" x2="181" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
+  <line x1="299" y1="274" x2="324" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
+  <line x1="442" y1="274" x2="467" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
+  <line x1="585" y1="274" x2="610" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
+  <line x1="728" y1="274" x2="753" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
+  <line x1="871" y1="274" x2="896" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
+  <line x1="1014" y1="274" x2="1039" y2="274" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.8"/>
 
-  <!-- Step 1 -->
-  <rect x="47" y="254" width="150" height="40" rx="7" fill="#1e3a5f" stroke="#4a9eff" stroke-width="1.5"/>
-  <text x="122" y="270" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="700">① /lit-search</text>
-  <text x="122" y="285" text-anchor="middle" fill="#4a7a9b" font-size="8">Find papers · 4 sources</text>
+  <!-- Step 1: lit-search -->
+  <rect x="43" y="254" width="113" height="40" rx="7" fill="#1e3a5f" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="99" y="270" text-anchor="middle" fill="#7ab8ff" font-size="8.5" font-weight="700">① /lit-search</text>
+  <text x="99" y="285" text-anchor="middle" fill="#4a7a9b" font-size="7.5">Find papers</text>
 
-  <!-- Step 2 -->
-  <rect x="227" y="254" width="127" height="40" rx="7" fill="#1a4a3a" stroke="#2ecc71" stroke-width="1.5"/>
-  <text x="290" y="270" text-anchor="middle" fill="#2ecc71" font-size="9" font-weight="700">② /lit-trends</text>
-  <text x="290" y="285" text-anchor="middle" fill="#2a6a3a" font-size="8">Spot patterns · Plots</text>
+  <!-- Step 2: lit-trends -->
+  <rect x="186" y="254" width="113" height="40" rx="7" fill="#1a4a3a" stroke="#2ecc71" stroke-width="1.5"/>
+  <text x="242" y="270" text-anchor="middle" fill="#2ecc71" font-size="8.5" font-weight="700">② /lit-trends</text>
+  <text x="242" y="285" text-anchor="middle" fill="#2a6a3a" font-size="7.5">Spot patterns</text>
 
-  <!-- Step 3 -->
-  <rect x="384" y="254" width="127" height="40" rx="7" fill="#3a1e5f" stroke="#9b59b6" stroke-width="1.5"/>
-  <text x="447" y="270" text-anchor="middle" fill="#c39bd3" font-size="9" font-weight="700">③ /lit-deep-dive</text>
-  <text x="447" y="285" text-anchor="middle" fill="#5a3a7a" font-size="8">Drill one paper</text>
+  <!-- Step 3: lit-download (NEW) -->
+  <rect x="329" y="254" width="113" height="40" rx="7" fill="#0d2a2e" stroke="#26c6da" stroke-width="1.5"/>
+  <text x="385" y="270" text-anchor="middle" fill="#26c6da" font-size="8.5" font-weight="700">③ /lit-download</text>
+  <text x="385" y="285" text-anchor="middle" fill="#1a7080" font-size="7.5">Get PDFs</text>
 
-  <!-- Step 4 -->
-  <rect x="541" y="254" width="127" height="40" rx="7" fill="#2a1a0d" stroke="#f39c12" stroke-width="1.5"/>
-  <text x="604" y="270" text-anchor="middle" fill="#f39c12" font-size="9" font-weight="700">④ /lit-reproduce</text>
-  <text x="604" y="285" text-anchor="middle" fill="#7a5020" font-size="8">Reproduce results</text>
+  <!-- Step 4: lit-deep-dive -->
+  <rect x="472" y="254" width="113" height="40" rx="7" fill="#3a1e5f" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="528" y="270" text-anchor="middle" fill="#c39bd3" font-size="8.5" font-weight="700">④ /lit-deep-dive</text>
+  <text x="528" y="285" text-anchor="middle" fill="#5a3a7a" font-size="7.5">Drill paper</text>
 
-  <!-- Step 5 -->
-  <rect x="698" y="254" width="127" height="40" rx="7" fill="#3a1e2e" stroke="#e74c3c" stroke-width="1.5"/>
-  <text x="761" y="270" text-anchor="middle" fill="#e74c3c" font-size="9" font-weight="700">⑤ /lit-compare</text>
-  <text x="761" y="285" text-anchor="middle" fill="#7a1a2a" font-size="8">Compare methods</text>
+  <!-- Step 5: lit-reproduce -->
+  <rect x="615" y="254" width="113" height="40" rx="7" fill="#3a1e2e" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="671" y="270" text-anchor="middle" fill="#e74c3c" font-size="8.5" font-weight="700">⑤ /lit-reproduce</text>
+  <text x="671" y="285" text-anchor="middle" fill="#7a1a2a" font-size="7.5">Reproduce</text>
 
-  <!-- Step 6 -->
-  <rect x="855" y="254" width="127" height="40" rx="7" fill="#1e3a3a" stroke="#1abc9c" stroke-width="1.5"/>
-  <text x="918" y="270" text-anchor="middle" fill="#1abc9c" font-size="9" font-weight="700">⑥ /lit-review</text>
-  <text x="918" y="285" text-anchor="middle" fill="#1a5a4a" font-size="8">Synthesize narrative</text>
+  <!-- Step 6: lit-compare -->
+  <rect x="758" y="254" width="113" height="40" rx="7" fill="#3a2e1e" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="814" y="270" text-anchor="middle" fill="#f39c12" font-size="8.5" font-weight="700">⑥ /lit-compare</text>
+  <text x="814" y="285" text-anchor="middle" fill="#7a5020" font-size="7.5">Compare</text>
 
-  <!-- Step 7 -->
-  <rect x="1012" y="254" width="127" height="40" rx="7" fill="#3a3a1e" stroke="#f1c40f" stroke-width="1.5"/>
-  <text x="1075" y="270" text-anchor="middle" fill="#f1c40f" font-size="9" font-weight="700">⑦ /lit-ppt</text>
-  <text x="1075" y="285" text-anchor="middle" fill="#7a7a10" font-size="8">Generate slides</text>
+  <!-- Step 7: lit-review -->
+  <rect x="901" y="254" width="113" height="40" rx="7" fill="#1e3a3a" stroke="#1abc9c" stroke-width="1.5"/>
+  <text x="957" y="270" text-anchor="middle" fill="#1abc9c" font-size="8.5" font-weight="700">⑦ /lit-review</text>
+  <text x="957" y="285" text-anchor="middle" fill="#1a5a4a" font-size="7.5">Synthesize</text>
+
+  <!-- Step 8: lit-ppt -->
+  <rect x="1044" y="254" width="113" height="40" rx="7" fill="#3a3a1e" stroke="#f1c40f" stroke-width="1.5"/>
+  <text x="1100" y="270" text-anchor="middle" fill="#f1c40f" font-size="8.5" font-weight="700">⑧ /lit-ppt</text>
+  <text x="1100" y="285" text-anchor="middle" fill="#7a7a10" font-size="7.5">Slides</text>
 
   <!-- ============ SKILLS GRID ============ -->
   <text x="600" y="322" text-anchor="middle" fill="#4a9eff" font-size="11" letter-spacing="4" font-weight="600">SKILL DETAILS</text>
 
-  <!-- Row 1: Skills 1-4 -->
+  <!-- Row 1: Skills 1-4 (lit-search · lit-trends · lit-deep-dive · lit-compare) -->
 
   <!-- SKILL 1: lit-search -->
-  <rect x="40" y="332" width="270" height="150" rx="10" fill="url(#skill1)" stroke="#4a9eff" stroke-width="1.5" opacity="0.95"/>
-  <rect x="40" y="332" width="270" height="35" rx="10" fill="#1a4a7a" opacity="0.6"/>
-  <rect x="40" y="355" width="270" height="12" fill="#1a4a7a" opacity="0.6"/>
+  <rect x="40" y="332" width="268" height="150" rx="10" fill="url(#skill1)" stroke="#4a9eff" stroke-width="1.5" opacity="0.95"/>
+  <rect x="40" y="332" width="268" height="35" rx="10" fill="#1a4a7a" opacity="0.6"/>
+  <rect x="40" y="355" width="268" height="12" fill="#1a4a7a" opacity="0.6"/>
   <text x="56" y="352" fill="#4a9eff" font-size="13" font-weight="700">/lit-search</text>
-  <text x="230" y="352" fill="#7ab8ff" font-size="9">/lit-search &lt;topic&gt;</text>
-  <!-- Sub-agents -->
+  <text x="222" y="352" fill="#7ab8ff" font-size="9">/lit-search &lt;topic&gt;</text>
   <text x="56" y="378" fill="#7ab8ff" font-size="9" font-weight="600">SUB-AGENTS (4, parallel):</text>
   <rect x="56" y="383" width="58" height="18" rx="4" fill="#0d2a4a" stroke="#4a9eff" stroke-width="0.8"/>
   <text x="85" y="395" text-anchor="middle" fill="#7ab8ff" font-size="8">PubMed</text>
@@ -191,125 +199,136 @@
   <text x="56" y="466" fill="#4a7a9b" font-size="8">Output: reports/searches/YYYY-MM-DD-&lt;topic&gt;.md</text>
 
   <!-- SKILL 2: lit-trends -->
-  <rect x="328" y="332" width="255" height="150" rx="10" fill="url(#skill2)" stroke="#2ecc71" stroke-width="1.5" opacity="0.95"/>
-  <rect x="328" y="332" width="255" height="35" rx="10" fill="#1a4a2a" opacity="0.6"/>
-  <rect x="328" y="355" width="255" height="12" fill="#1a4a2a" opacity="0.6"/>
-  <text x="344" y="352" fill="#2ecc71" font-size="13" font-weight="700">/lit-trends</text>
-  <text x="504" y="352" fill="#a8ffcc" font-size="9">/lit-trends</text>
-  <text x="344" y="378" fill="#a8ffcc" font-size="9" font-weight="600">OUTPUTS (5 plots):</text>
-  <text x="344" y="393" fill="#7ab8ff" font-size="8.5">· Publication volume over time</text>
-  <text x="344" y="406" fill="#7ab8ff" font-size="8.5">· Source distribution pie chart</text>
-  <text x="344" y="419" fill="#7ab8ff" font-size="8.5">· Top author network</text>
-  <text x="344" y="432" fill="#7ab8ff" font-size="8.5">· Keyword frequency heatmap</text>
-  <text x="344" y="445" fill="#7ab8ff" font-size="8.5">· Focus area coverage</text>
-  <text x="344" y="460" fill="#2a6a3a" font-size="8.5">Tags: [NEW] · [ONGOING] · [FADING]</text>
-  <text x="344" y="473" fill="#4a7a9b" font-size="8">Output: reports/trends/ + plots/</text>
+  <rect x="319" y="332" width="268" height="150" rx="10" fill="url(#skill2)" stroke="#2ecc71" stroke-width="1.5" opacity="0.95"/>
+  <rect x="319" y="332" width="268" height="35" rx="10" fill="#1a4a2a" opacity="0.6"/>
+  <rect x="319" y="355" width="268" height="12" fill="#1a4a2a" opacity="0.6"/>
+  <text x="335" y="352" fill="#2ecc71" font-size="13" font-weight="700">/lit-trends</text>
+  <text x="495" y="352" fill="#a8ffcc" font-size="9">/lit-trends</text>
+  <text x="335" y="378" fill="#a8ffcc" font-size="9" font-weight="600">OUTPUTS (5 plots):</text>
+  <text x="335" y="393" fill="#7ab8ff" font-size="8.5">· Publication volume over time</text>
+  <text x="335" y="406" fill="#7ab8ff" font-size="8.5">· Source distribution pie chart</text>
+  <text x="335" y="419" fill="#7ab8ff" font-size="8.5">· Top author network</text>
+  <text x="335" y="432" fill="#7ab8ff" font-size="8.5">· Keyword frequency heatmap</text>
+  <text x="335" y="445" fill="#7ab8ff" font-size="8.5">· Focus area coverage</text>
+  <text x="335" y="460" fill="#2a6a3a" font-size="8.5">Tags: [NEW] · [ONGOING] · [FADING]</text>
+  <text x="335" y="473" fill="#4a7a9b" font-size="8">Output: reports/trends/ + plots/</text>
 
   <!-- SKILL 3: lit-deep-dive -->
-  <rect x="601" y="332" width="255" height="150" rx="10" fill="url(#skill3)" stroke="#9b59b6" stroke-width="1.5" opacity="0.95"/>
-  <rect x="601" y="332" width="255" height="35" rx="10" fill="#3a1a4a" opacity="0.6"/>
-  <rect x="601" y="355" width="255" height="12" fill="#3a1a4a" opacity="0.6"/>
-  <text x="617" y="352" fill="#c39bd3" font-size="13" font-weight="700">/lit-deep-dive</text>
-  <text x="789" y="352" fill="#d7b8ff" font-size="9">&lt;DOI | PMID&gt;</text>
-  <text x="617" y="378" fill="#d7b8ff" font-size="9" font-weight="600">SUB-AGENTS (3, parallel):</text>
-  <rect x="617" y="383" width="68" height="18" rx="4" fill="#1e0d2a" stroke="#9b59b6" stroke-width="0.8"/>
-  <text x="651" y="395" text-anchor="middle" fill="#c39bd3" font-size="7.5">Metadata</text>
-  <rect x="693" y="383" width="75" height="18" rx="4" fill="#1e0d2a" stroke="#9b59b6" stroke-width="0.8"/>
-  <text x="730" y="395" text-anchor="middle" fill="#c39bd3" font-size="7.5">Related Papers</text>
-  <rect x="776" y="383" width="68" height="18" rx="4" fill="#1e0d2a" stroke="#9b59b6" stroke-width="0.8"/>
-  <text x="810" y="395" text-anchor="middle" fill="#c39bd3" font-size="7.5">Code &amp; Data</text>
-  <text x="617" y="420" fill="#7ab8ff" font-size="8.5">· Full text extraction (PMC)</text>
-  <text x="617" y="433" fill="#7ab8ff" font-size="8.5">· Citing + related paper mapping</text>
-  <text x="617" y="446" fill="#7ab8ff" font-size="8.5">· Code/data availability check</text>
-  <text x="617" y="459" fill="#7ab8ff" font-size="8.5">· Reproducibility assessment</text>
-  <text x="617" y="473" fill="#4a7a9b" font-size="8">Output: reports/deep-dives/</text>
+  <rect x="598" y="332" width="268" height="150" rx="10" fill="url(#skill3)" stroke="#9b59b6" stroke-width="1.5" opacity="0.95"/>
+  <rect x="598" y="332" width="268" height="35" rx="10" fill="#3a1a4a" opacity="0.6"/>
+  <rect x="598" y="355" width="268" height="12" fill="#3a1a4a" opacity="0.6"/>
+  <text x="614" y="352" fill="#c39bd3" font-size="13" font-weight="700">/lit-deep-dive</text>
+  <text x="786" y="352" fill="#d7b8ff" font-size="9">&lt;DOI | PMID&gt;</text>
+  <text x="614" y="378" fill="#d7b8ff" font-size="9" font-weight="600">SUB-AGENTS (3, parallel):</text>
+  <rect x="614" y="383" width="68" height="18" rx="4" fill="#1e0d2a" stroke="#9b59b6" stroke-width="0.8"/>
+  <text x="648" y="395" text-anchor="middle" fill="#c39bd3" font-size="7.5">Metadata</text>
+  <rect x="690" y="383" width="75" height="18" rx="4" fill="#1e0d2a" stroke="#9b59b6" stroke-width="0.8"/>
+  <text x="727" y="395" text-anchor="middle" fill="#c39bd3" font-size="7.5">Related Papers</text>
+  <rect x="773" y="383" width="68" height="18" rx="4" fill="#1e0d2a" stroke="#9b59b6" stroke-width="0.8"/>
+  <text x="807" y="395" text-anchor="middle" fill="#c39bd3" font-size="7.5">Code &amp; Data</text>
+  <text x="614" y="420" fill="#7ab8ff" font-size="8.5">· Full text extraction (PMC)</text>
+  <text x="614" y="433" fill="#7ab8ff" font-size="8.5">· Citing + related paper mapping</text>
+  <text x="614" y="446" fill="#7ab8ff" font-size="8.5">· Code/data availability check</text>
+  <text x="614" y="459" fill="#7ab8ff" font-size="8.5">· Reproducibility assessment</text>
+  <text x="614" y="473" fill="#4a7a9b" font-size="8">Output: reports/deep-dives/</text>
 
   <!-- SKILL 4: lit-compare -->
-  <rect x="874" y="332" width="286" height="150" rx="10" fill="url(#skill4)" stroke="#e67e22" stroke-width="1.5" opacity="0.95"/>
-  <rect x="874" y="332" width="286" height="35" rx="10" fill="#4a3010" opacity="0.6"/>
-  <rect x="874" y="355" width="286" height="12" fill="#4a3010" opacity="0.6"/>
-  <text x="890" y="352" fill="#f39c12" font-size="13" font-weight="700">/lit-compare</text>
-  <text x="1078" y="352" fill="#ffd28a" font-size="9">&lt;A&gt; vs &lt;B&gt;</text>
-  <text x="890" y="378" fill="#ffd28a" font-size="9" font-weight="600">1 SUB-AGENT PER METHOD (parallel):</text>
-  <text x="890" y="396" fill="#7ab8ff" font-size="8.5">· Benchmark performance tables</text>
-  <text x="890" y="409" fill="#7ab8ff" font-size="8.5">· Architecture comparison</text>
-  <text x="890" y="422" fill="#7ab8ff" font-size="8.5">· Feature matrix (datasets, metrics)</text>
-  <text x="890" y="435" fill="#7ab8ff" font-size="8.5">· Use-case recommendations</text>
-  <text x="890" y="448" fill="#7ab8ff" font-size="8.5">· Strength / weakness analysis</text>
-  <text x="890" y="473" fill="#4a7a9b" font-size="8">Output: reports/comparisons/</text>
+  <rect x="877" y="332" width="283" height="150" rx="10" fill="url(#skill4)" stroke="#e67e22" stroke-width="1.5" opacity="0.95"/>
+  <rect x="877" y="332" width="283" height="35" rx="10" fill="#4a3010" opacity="0.6"/>
+  <rect x="877" y="355" width="283" height="12" fill="#4a3010" opacity="0.6"/>
+  <text x="893" y="352" fill="#f39c12" font-size="13" font-weight="700">/lit-compare</text>
+  <text x="1081" y="352" fill="#ffd28a" font-size="9">&lt;A&gt; vs &lt;B&gt;</text>
+  <text x="893" y="378" fill="#ffd28a" font-size="9" font-weight="600">1 SUB-AGENT PER METHOD (parallel):</text>
+  <text x="893" y="396" fill="#7ab8ff" font-size="8.5">· Benchmark performance tables</text>
+  <text x="893" y="409" fill="#7ab8ff" font-size="8.5">· Architecture comparison</text>
+  <text x="893" y="422" fill="#7ab8ff" font-size="8.5">· Feature matrix (datasets, metrics)</text>
+  <text x="893" y="435" fill="#7ab8ff" font-size="8.5">· Use-case recommendations</text>
+  <text x="893" y="448" fill="#7ab8ff" font-size="8.5">· Strength / weakness analysis</text>
+  <text x="893" y="473" fill="#4a7a9b" font-size="8">Output: reports/comparisons/</text>
 
-  <!-- Row 2: Skills 5-7 + Output box -->
+  <!-- Row 2: Skills 5-8 (lit-download · lit-reproduce · lit-review · lit-ppt) -->
 
-  <!-- SKILL 5: lit-reproduce -->
-  <rect x="40" y="500" width="302" height="150" rx="10" fill="url(#skill5)" stroke="#e74c3c" stroke-width="1.5" opacity="0.95"/>
-  <rect x="40" y="500" width="302" height="35" rx="10" fill="#3a0d1a" opacity="0.6"/>
-  <rect x="40" y="523" width="302" height="12" fill="#3a0d1a" opacity="0.6"/>
-  <text x="56" y="520" fill="#e74c3c" font-size="13" font-weight="700">/lit-reproduce</text>
-  <text x="251" y="520" fill="#ff8888" font-size="9">&lt;ID&gt; — &lt;target&gt;</text>
-  <text x="56" y="546" fill="#ff8888" font-size="9" font-weight="600">SUB-AGENTS (3, parallel):</text>
-  <rect x="56" y="551" width="85" height="18" rx="4" fill="#210d19" stroke="#e74c3c" stroke-width="0.8"/>
-  <text x="98" y="563" text-anchor="middle" fill="#ff8888" font-size="7.5">Methods Extract</text>
-  <rect x="149" y="551" width="85" height="18" rx="4" fill="#210d19" stroke="#e74c3c" stroke-width="0.8"/>
-  <text x="191" y="563" text-anchor="middle" fill="#ff8888" font-size="7.5">Resource Discovery</text>
-  <rect x="242" y="551" width="85" height="18" rx="4" fill="#210d19" stroke="#e74c3c" stroke-width="0.8"/>
-  <text x="284" y="563" text-anchor="middle" fill="#ff8888" font-size="7.5">Difficulty Assess</text>
-  <text x="56" y="588" fill="#7ab8ff" font-size="8.5">· Analytical pipeline extraction</text>
-  <text x="56" y="601" fill="#7ab8ff" font-size="8.5">· Learning resources per step</text>
-  <text x="56" y="614" fill="#7ab8ff" font-size="8.5">· Interactive teaching (hardest parts)</text>
-  <text x="56" y="627" fill="#7ab8ff" font-size="8.5">· Adapted to user knowledge level</text>
-  <text x="56" y="641" fill="#4a7a9b" font-size="8">Output: reports/reproductions/</text>
+  <!-- SKILL 5: lit-download (NEW) -->
+  <rect x="40" y="500" width="268" height="150" rx="10" fill="url(#skill8)" stroke="#26c6da" stroke-width="1.5" opacity="0.95"/>
+  <rect x="40" y="500" width="268" height="35" rx="10" fill="#0d2e3a" opacity="0.6"/>
+  <rect x="40" y="523" width="268" height="12" fill="#0d2e3a" opacity="0.6"/>
+  <text x="56" y="520" fill="#26c6da" font-size="13" font-weight="700">/lit-download</text>
+  <text x="213" y="520" fill="#a0e8f0" font-size="9">[latest | DOIs]</text>
+  <text x="56" y="546" fill="#a0e8f0" font-size="9" font-weight="600">DOWNLOAD ROUTES (in order):</text>
+  <rect x="56" y="551" width="54" height="18" rx="4" fill="#082028" stroke="#26c6da" stroke-width="0.8"/>
+  <text x="83" y="563" text-anchor="middle" fill="#26c6da" font-size="7.5">PMC</text>
+  <rect x="118" y="551" width="58" height="18" rx="4" fill="#082028" stroke="#2ecc71" stroke-width="0.8"/>
+  <text x="147" y="563" text-anchor="middle" fill="#2ecc71" font-size="7.5">bioRxiv</text>
+  <rect x="184" y="551" width="52" height="18" rx="4" fill="#082028" stroke="#9b59b6" stroke-width="0.8"/>
+  <text x="210" y="563" text-anchor="middle" fill="#c39bd3" font-size="7.5">arXiv</text>
+  <rect x="56" y="574" width="72" height="18" rx="4" fill="#082028" stroke="#f39c12" stroke-width="0.8"/>
+  <text x="92" y="586" text-anchor="middle" fill="#f39c12" font-size="7.5">Unpaywall</text>
+  <rect x="136" y="574" width="68" height="18" rx="4" fill="#082028" stroke="#e74c3c" stroke-width="0.8"/>
+  <text x="170" y="586" text-anchor="middle" fill="#ff8888" font-size="7.5">Publisher</text>
+  <text x="56" y="610" fill="#7ab8ff" font-size="8.5">· OA only · PDF + manifest.md saved</text>
+  <text x="56" y="623" fill="#7ab8ff" font-size="8.5">· Confirms list before downloading</text>
+  <text x="56" y="641" fill="#4a7a9b" font-size="8">Output: reports/downloads/YYYY-MM-DD-&lt;topic&gt;/</text>
 
-  <!-- SKILL 6: lit-review -->
-  <rect x="360" y="500" width="270" height="150" rx="10" fill="url(#skill6)" stroke="#1abc9c" stroke-width="1.5" opacity="0.95"/>
-  <rect x="360" y="500" width="270" height="35" rx="10" fill="#0d3a2a" opacity="0.6"/>
-  <rect x="360" y="523" width="270" height="12" fill="#0d3a2a" opacity="0.6"/>
-  <text x="376" y="520" fill="#1abc9c" font-size="13" font-weight="700">/lit-review</text>
-  <text x="537" y="520" fill="#a8ffd4" font-size="9">&lt;topic&gt;</text>
-  <text x="376" y="546" fill="#a8ffd4" font-size="9" font-weight="600">SUB-AGENTS (3, parallel):</text>
-  <rect x="376" y="551" width="68" height="18" rx="4" fill="#0d2121" stroke="#1abc9c" stroke-width="0.8"/>
-  <text x="410" y="563" text-anchor="middle" fill="#1abc9c" font-size="7.5">Background</text>
-  <rect x="452" y="551" width="88" height="18" rx="4" fill="#0d2121" stroke="#1abc9c" stroke-width="0.8"/>
-  <text x="496" y="563" text-anchor="middle" fill="#1abc9c" font-size="7.5">Methods Land.</text>
-  <rect x="548" y="551" width="68" height="18" rx="4" fill="#0d2121" stroke="#1abc9c" stroke-width="0.8"/>
-  <text x="582" y="563" text-anchor="middle" fill="#1abc9c" font-size="7.5">Gaps &amp; Future</text>
-  <text x="376" y="590" fill="#7ab8ff" font-size="8.5">· Narrative synthesis from all reports</text>
-  <text x="376" y="603" fill="#7ab8ff" font-size="8.5">· Grant intro / review paper quality</text>
-  <text x="376" y="616" fill="#7ab8ff" font-size="8.5">· Focus: disease, targets, drug disc.</text>
-  <text x="376" y="641" fill="#4a7a9b" font-size="8">Output: reports/reviews/</text>
+  <!-- SKILL 6: lit-reproduce -->
+  <rect x="319" y="500" width="268" height="150" rx="10" fill="url(#skill5)" stroke="#e74c3c" stroke-width="1.5" opacity="0.95"/>
+  <rect x="319" y="500" width="268" height="35" rx="10" fill="#3a0d1a" opacity="0.6"/>
+  <rect x="319" y="523" width="268" height="12" fill="#3a0d1a" opacity="0.6"/>
+  <text x="335" y="520" fill="#e74c3c" font-size="13" font-weight="700">/lit-reproduce</text>
+  <text x="490" y="520" fill="#ff8888" font-size="9">&lt;ID&gt; — &lt;fig&gt;</text>
+  <text x="335" y="546" fill="#ff8888" font-size="9" font-weight="600">SUB-AGENTS (3, parallel):</text>
+  <rect x="335" y="551" width="78" height="18" rx="4" fill="#210d19" stroke="#e74c3c" stroke-width="0.8"/>
+  <text x="374" y="563" text-anchor="middle" fill="#ff8888" font-size="7.5">Methods Extract</text>
+  <rect x="421" y="551" width="78" height="18" rx="4" fill="#210d19" stroke="#e74c3c" stroke-width="0.8"/>
+  <text x="460" y="563" text-anchor="middle" fill="#ff8888" font-size="7.5">Resource Disc.</text>
+  <rect x="507" y="551" width="72" height="18" rx="4" fill="#210d19" stroke="#e74c3c" stroke-width="0.8"/>
+  <text x="543" y="563" text-anchor="middle" fill="#ff8888" font-size="7.5">Difficulty</text>
+  <text x="335" y="588" fill="#7ab8ff" font-size="8.5">· Analytical pipeline extraction</text>
+  <text x="335" y="601" fill="#7ab8ff" font-size="8.5">· Learning resources per step</text>
+  <text x="335" y="614" fill="#7ab8ff" font-size="8.5">· Interactive teaching (hardest parts)</text>
+  <text x="335" y="627" fill="#7ab8ff" font-size="8.5">· Adapted to user knowledge level</text>
+  <text x="335" y="641" fill="#4a7a9b" font-size="8">Output: reports/reproductions/</text>
 
-  <!-- SKILL 7: lit-ppt -->
-  <rect x="648" y="500" width="270" height="150" rx="10" fill="url(#skill7)" stroke="#f1c40f" stroke-width="1.5" opacity="0.95"/>
-  <rect x="648" y="500" width="270" height="35" rx="10" fill="#3a3a10" opacity="0.6"/>
-  <rect x="648" y="523" width="270" height="12" fill="#3a3a3a" opacity="0.4"/>
-  <text x="664" y="520" fill="#f1c40f" font-size="13" font-weight="700">/lit-ppt</text>
-  <text x="798" y="520" fill="#fff799" font-size="9">[search | trends | review]</text>
-  <text x="664" y="546" fill="#fff799" font-size="9" font-weight="600">3 PRESENTATION STYLES:</text>
-  <rect x="664" y="551" width="74" height="18" rx="4" fill="#21210d" stroke="#f1c40f" stroke-width="0.8"/>
-  <text x="701" y="563" text-anchor="middle" fill="#f1c40f" font-size="7.5">Lab Meeting</text>
-  <text x="701" y="574" text-anchor="middle" fill="#7a7a10" font-size="6.5">15-20 slides</text>
-  <rect x="746" y="551" width="74" height="18" rx="4" fill="#21210d" stroke="#f1c40f" stroke-width="0.8"/>
-  <text x="783" y="563" text-anchor="middle" fill="#f1c40f" font-size="7.5">Journal Club</text>
-  <text x="783" y="574" text-anchor="middle" fill="#7a7a10" font-size="6.5">10-15 slides</text>
-  <rect x="828" y="551" width="74" height="18" rx="4" fill="#21210d" stroke="#f1c40f" stroke-width="0.8"/>
-  <text x="865" y="563" text-anchor="middle" fill="#f1c40f" font-size="7.5">Quick Update</text>
-  <text x="865" y="574" text-anchor="middle" fill="#7a7a10" font-size="6.5">5-8 slides</text>
-  <text x="664" y="600" fill="#7ab8ff" font-size="8.5">· PPTX via python-pptx</text>
-  <text x="664" y="613" fill="#7ab8ff" font-size="8.5">· White backgrounds, no text truncation</text>
-  <text x="664" y="626" fill="#7ab8ff" font-size="8.5">· Reads from latest report automatically</text>
-  <text x="664" y="641" fill="#4a7a9b" font-size="8">Output: reports/presentations/.pptx</text>
+  <!-- SKILL 7: lit-review -->
+  <rect x="598" y="500" width="268" height="150" rx="10" fill="url(#skill6)" stroke="#1abc9c" stroke-width="1.5" opacity="0.95"/>
+  <rect x="598" y="500" width="268" height="35" rx="10" fill="#0d3a2a" opacity="0.6"/>
+  <rect x="598" y="523" width="268" height="12" fill="#0d3a2a" opacity="0.6"/>
+  <text x="614" y="520" fill="#1abc9c" font-size="13" font-weight="700">/lit-review</text>
+  <text x="775" y="520" fill="#a8ffd4" font-size="9">&lt;topic&gt;</text>
+  <text x="614" y="546" fill="#a8ffd4" font-size="9" font-weight="600">SUB-AGENTS (3, parallel):</text>
+  <rect x="614" y="551" width="68" height="18" rx="4" fill="#0d2121" stroke="#1abc9c" stroke-width="0.8"/>
+  <text x="648" y="563" text-anchor="middle" fill="#1abc9c" font-size="7.5">Background</text>
+  <rect x="690" y="551" width="88" height="18" rx="4" fill="#0d2121" stroke="#1abc9c" stroke-width="0.8"/>
+  <text x="734" y="563" text-anchor="middle" fill="#1abc9c" font-size="7.5">Methods Land.</text>
+  <rect x="786" y="551" width="68" height="18" rx="4" fill="#0d2121" stroke="#1abc9c" stroke-width="0.8"/>
+  <text x="820" y="563" text-anchor="middle" fill="#1abc9c" font-size="7.5">Gaps &amp; Future</text>
+  <text x="614" y="590" fill="#7ab8ff" font-size="8.5">· Narrative synthesis from all reports</text>
+  <text x="614" y="603" fill="#7ab8ff" font-size="8.5">· Grant intro / review paper quality</text>
+  <text x="614" y="616" fill="#7ab8ff" font-size="8.5">· Focus: disease, targets, drug disc.</text>
+  <text x="614" y="641" fill="#4a7a9b" font-size="8">Output: reports/reviews/</text>
 
-  <!-- Output formats box -->
-  <rect x="936" y="500" width="224" height="150" rx="10" fill="#0d1117" stroke="#4a9eff" stroke-width="1" opacity="0.9" stroke-dasharray="6,3"/>
-  <text x="1048" y="522" text-anchor="middle" fill="#4a9eff" font-size="11" font-weight="700" letter-spacing="2">OUTPUT FILES</text>
-  <text x="952" y="542" fill="#7ab8ff" font-size="8.5">reports/searches/</text>
-  <text x="952" y="555" fill="#4a7a9b" font-size="7.5">  YYYY-MM-DD-&lt;topic&gt;.md</text>
-  <text x="952" y="569" fill="#2ecc71" font-size="8.5">reports/trends/</text>
-  <text x="952" y="582" fill="#4a7a9b" font-size="7.5">  .md + plots/*.png</text>
-  <text x="952" y="596" fill="#9b59b6" font-size="8.5">reports/deep-dives/</text>
-  <text x="952" y="609" fill="#e74c3c" font-size="8.5">reports/reproductions/</text>
-  <text x="952" y="622" fill="#e67e22" font-size="8.5">reports/comparisons/</text>
-  <text x="952" y="635" fill="#1abc9c" font-size="8.5">reports/reviews/</text>
-  <text x="952" y="648" fill="#f1c40f" font-size="8.5">reports/presentations/</text>
+  <!-- SKILL 8: lit-ppt -->
+  <rect x="877" y="500" width="283" height="150" rx="10" fill="url(#skill7)" stroke="#f1c40f" stroke-width="1.5" opacity="0.95"/>
+  <rect x="877" y="500" width="283" height="35" rx="10" fill="#3a3a10" opacity="0.6"/>
+  <rect x="877" y="523" width="283" height="12" fill="#3a3a3a" opacity="0.4"/>
+  <text x="893" y="520" fill="#f1c40f" font-size="13" font-weight="700">/lit-ppt</text>
+  <text x="1010" y="520" fill="#fff799" font-size="9">[search | trends | review]</text>
+  <text x="893" y="546" fill="#fff799" font-size="9" font-weight="600">3 PRESENTATION STYLES:</text>
+  <rect x="893" y="551" width="74" height="18" rx="4" fill="#21210d" stroke="#f1c40f" stroke-width="0.8"/>
+  <text x="930" y="563" text-anchor="middle" fill="#f1c40f" font-size="7.5">Lab Meeting</text>
+  <text x="930" y="574" text-anchor="middle" fill="#7a7a10" font-size="6.5">15-20 slides</text>
+  <rect x="975" y="551" width="74" height="18" rx="4" fill="#21210d" stroke="#f1c40f" stroke-width="0.8"/>
+  <text x="1012" y="563" text-anchor="middle" fill="#f1c40f" font-size="7.5">Journal Club</text>
+  <text x="1012" y="574" text-anchor="middle" fill="#7a7a10" font-size="6.5">10-15 slides</text>
+  <rect x="1057" y="551" width="74" height="18" rx="4" fill="#21210d" stroke="#f1c40f" stroke-width="0.8"/>
+  <text x="1094" y="563" text-anchor="middle" fill="#f1c40f" font-size="7.5">Quick Update</text>
+  <text x="1094" y="574" text-anchor="middle" fill="#7a7a10" font-size="6.5">5-8 slides</text>
+  <text x="893" y="600" fill="#7ab8ff" font-size="8.5">· PPTX via python-pptx</text>
+  <text x="893" y="613" fill="#7ab8ff" font-size="8.5">· White backgrounds, no text truncation</text>
+  <text x="893" y="626" fill="#7ab8ff" font-size="8.5">· Reads from latest report automatically</text>
+  <text x="893" y="641" fill="#4a7a9b" font-size="8">Output: reports/presentations/.pptx</text>
+
+  <!-- Compact output dirs strip -->
+  <text x="600" y="660" text-anchor="middle" fill="#2a4a5a" font-size="7.5" letter-spacing="0.5">OUTPUT DIRS: searches/ · trends/ · downloads/ · deep-dives/ · comparisons/ · reproductions/ · reviews/ · presentations/</text>
 
   <!-- ============ BOTTOM: Architecture + User Context ============ -->
 

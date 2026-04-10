@@ -62,6 +62,35 @@ User
 
 ---
 
+### `/lit-download [latest|<report.md>|<IDs...>]`
+**Purpose:** Download open-access full-text PDFs for papers from a search report or an explicit list of identifiers.
+
+**Sub-agents dispatched:** One per paper (batched in parallel groups of 10).
+
+**Input modes:**
+| Argument | Behaviour |
+|----------|-----------|
+| `latest` (default) | Extract all DOIs/PMIDs/arXiv IDs from the most recent search report |
+| `<report.md>` | Use a specific report file from `reports/searches/` |
+| `<ID1> <ID2> ...` | Explicit list of DOIs, PMIDs, or arXiv IDs |
+
+**Download routes tried in order:**
+1. **PubMed Central (PMC)** — for PMIDs and journal DOIs with OA status
+2. **bioRxiv / medRxiv** — direct PDF URL (`/content/{doi}v1.full.pdf`)
+3. **arXiv** — `arxiv.org/pdf/{id}`
+4. **Unpaywall API** — finds legal OA copies of journal articles by DOI
+5. **Publisher page** — last resort, scrapes for open PDF links
+
+**Key behaviors:**
+- Asks user to confirm the paper list before downloading
+- Open-access only — never attempts to bypass paywalls
+- Saves individual PDFs + a `manifest.md` with download status for every paper
+- Lists unavailable papers with tips (ILL, ResearchGate, author email)
+
+**Output:** `reports/downloads/YYYY-MM-DD-<topic>/` (PDFs + `manifest.md`)
+
+---
+
 ### `/lit-deep-dive <DOI or PMID>`
 **Purpose:** Exhaustive analysis of a single paper — full text, related work, code/data availability, reproducibility assessment.
 
@@ -154,6 +183,7 @@ User
 ```
 /lit-search <topic>          # find papers
 /lit-trends                  # identify what stands out + get next-step suggestions
+/lit-download latest         # download open-access PDFs from that report
 /lit-deep-dive <DOI>         # drill into a specific paper
 /lit-reproduce <ID> — Fig 3  # learn to reproduce a key result
 /lit-compare <A> vs <B>      # resolve a method choice
@@ -185,6 +215,7 @@ literature_search/
 ├── reports/
 │   ├── searches/                  # /lit-search output
 │   ├── trends/                    # /lit-trends output + plots/
+│   ├── downloads/                 # /lit-download output (PDFs + manifest.md)
 │   ├── deep-dives/                # /lit-deep-dive output
 │   ├── comparisons/               # /lit-compare output
 │   ├── reproductions/             # /lit-reproduce output

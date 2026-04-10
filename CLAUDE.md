@@ -15,7 +15,8 @@ literature_search/
 │   ├── comparisons/               # /lit-compare output
 │   ├── reproductions/             # /lit-reproduce output
 │   ├── reviews/                   # /lit-review output
-│   └── presentations/             # /lit-ppt output (.pptx)
+│   ├── presentations/             # /lit-ppt output (.pptx)
+│   └── downloads/                 # /lit-download output (PDFs + manifest.md)
 └── .claude/skills/                # Skill definitions
     ├── lit-search/                # Multi-source paper search
     ├── lit-trends/                # Trend analysis + visualizations
@@ -23,7 +24,8 @@ literature_search/
     ├── lit-compare/               # Head-to-head method comparison
     ├── lit-reproduce/              # Reproduction guide + interactive teaching
     ├── lit-review/                # Mini-review synthesis
-    └── lit-ppt/                   # Presentation generator
+    ├── lit-ppt/                   # Presentation generator
+    └── lit-download/              # PDF downloader (PMC, bioRxiv, arXiv, Unpaywall)
 ```
 
 ## Available Skills (Slash Commands)
@@ -37,16 +39,18 @@ literature_search/
 | `/lit-reproduce <ID> — <target>` | Reproduce a figure/result — pipeline extraction, resources, interactive teaching. |
 | `/lit-review <topic>` | Mini-review narrative from all accumulated reports. |
 | `/lit-ppt [search\|trends\|review]` | Generate a PPTX presentation from a report. |
+| `/lit-download [latest\|<report.md>\|<IDs...>]` | Download open-access PDFs (PMC, bioRxiv, arXiv, Unpaywall). Saves to `reports/downloads/`. |
 
 ## Typical Workflow
 
 1. `/lit-search` → find papers on a topic
 2. `/lit-trends` → identify what stands out
-3. `/lit-deep-dive` → drill into a specific paper
-4. `/lit-reproduce` → learn how to reproduce a specific result
-5. `/lit-compare` → compare competing methods
-6. `/lit-review` → synthesize into a narrative
-7. `/lit-ppt` → generate slides for lab meeting
+3. `/lit-download` → download open-access PDFs from the search results
+4. `/lit-deep-dive` → drill into a specific paper
+5. `/lit-reproduce` → learn how to reproduce a specific result
+6. `/lit-compare` → compare competing methods
+7. `/lit-review` → synthesize into a narrative
+8. `/lit-ppt` → generate slides for lab meeting
 
 ## Data Sources
 

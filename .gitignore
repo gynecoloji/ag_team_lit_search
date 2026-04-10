@@ -1,4 +1,5 @@
 /docs
+*.png
 
 # macOS
 .DS_Store
@@ -24,3 +25,5 @@ reports/presentations/*.pptx
 # Editor
 .vscode/
 .idea/
+reports/
+.playwright-mcp/
